@@ -1,0 +1,469 @@
+
+/*  Author: Leslie Brockman  */
+/*	Date Modified: 07/02/2026         */
+/*	File: styles.css.        */
+
+/* CSS Reset */
+
+/* Global Styles */
+body,
+header,
+nav,
+main,
+footer,
+img,
+video,
+h1,
+h3,
+ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #f6eee4;
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+/* adding indent rule for all paragraphs, so they are not flush with the left margin. */
+p {
+    text-indent: 2em;
+}
+
+/* Style rules for Navigation */
+nav {
+    background-color: #2a1f14;
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Geneva", "Arial", sans-serif;
+}
+
+nav ul li a {
+    color: #f6eee4;
+    text-decoration: none;
+    padding: 0.5em 2em; /* top/bottom, left/right */
+    display: block;
+}
+
+/* Header visibility defaults */
+.mobile {
+    display: none;
+}
+
+.tab-desk {
+    display: block;
+}
+
+.tab-desk img {
+    display: block;
+}
+
+/* Style rules for main content */
+main {
+    padding: 2%;
+    font-family: "Lora", serif;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding-top: 2%;
+}
+
+main ul {
+    list-style-type: square;
+    padding-left: 2%;
+    font-size: 1.2em;
+}
+
+.link {
+    color: #4d3319;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.action {
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.round {
+    border-radius: 6px;
+}
+/*These are the styles for the gallery page */
+/*These are the rules for the aside element in the gallery page */
+
+aside {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px #c5a687;
+}
+
+/*These are the rules for the figure elements in the gallery page */
+
+/*These are the rules for the figcaption elements in the gallery page */
+figcaption {
+    margin: 2% auto;
+    max-width: 400px;
+    box-shadow: 6px 6px 10px #c5a687;
+    border: 4px solid #2a1f14; 
+    padding: 2%;
+    border-top: 4px solid #2a1f14;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+#info ul {
+    margin-left: 10%;
+}
+
+.latest img
+{  height: 300px;
+   width: 500px;
+}
+
+.info img
+{  height: 300px;
+   width: 400px;
+}
+
+#contact,
+#form h2 {
+    text-align: center;
+}
+
+.tel-link {
+    background-color: #2a1f14;
+    padding: 2%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Style rules for form elements */
+fieldset,
+input,
+textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+form #submit {
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+
+
+/* Style rules for Footer content*/
+footer {
+    font-size: 0.85em;
+    background-color: #2a1f14;
+    color: #f6eee4;
+    text-align: center;
+    padding: 1% 0%;
+    text-decoration: none;
+}
+/* adding the a for target of the font color for the links in the footer, so they are not the default blue color. */
+footer a {
+    color: #f6eee4;
+}
+
+/* style rules for the mobile view port */
+
+/* Side note not in deliverables: With mobile first design, we should start at the smallest screen size and work our way up. The following media query is for the mobile view port. We need to layer the design to get rid of the CSS monster. What am I missing here? Global rules are set for desktop 1280px and above at the top--i dont think it matters to the CSS beyond the selector hierarchy rules where the placement of the rules are. Approach 1: Start with Mobile queries smallest screen size at top-then go down with the global desktop rules at the bottom. Approach 2: try to organize by page styles--with the media queries by size at the top. 
+Which ever approach gives better performance and clarity--better manageability. Confusion and scope creep the worst enemies. */
+
+/*Style rules to show mobile class and hide the tab-desk class when the screen width is 480px or less for normal smartphones. */
+
+@media screen and (max-width: 480px) {
+    .mobile,
+    .mobile-tablet {
+        display: block;
+        background-color: #f6eee4;
+    }
+
+    nav ul li {
+        display: block;
+        border-top: 0.5px solid #f6eee4;
+    }
+
+    .tab-desk,
+    .desktop {
+        display: none;
+    }
+
+    /*Style rules for header area*/
+
+    .mobile h1 {
+        padding: 2%;
+        text-align: center;
+        font-family: "Emblema One", system-ui;
+    }
+
+    .mobile h3 {
+        padding: 2%;
+        text-align: center;
+        font-family: "Lora", serif;
+    }
+}
+/* Style rules for main content*/
+
+/*Style rules for header area*/
+
+
+/*Media Query for Tablet Viewport*/
+
+
+@media screen and (min-width: 620px), print {
+    /* Tablet Viewport: Show tab-desk class, hide mobile class*/
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Tablet Viewport: Style Rules for Nav area */
+
+    nav ul li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+
+    nav ul li a {
+        padding: 0.5em;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+    }
+
+    aside {
+        grid-column: 1 / span 2;
+    }
+
+    /* Tablet Viewport: Style rule for form element */
+
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+/* Media query for Large Desktop Viewports (1280px and above) This is so confsuing, delverables ask for this quiery here, but it should be under the 1000 desktop rules.*/
+
+@media screen and (min-width: 1921px) {
+    body {
+        background: linear-gradient(#f6eee4, #78593a);
+    }
+
+    #wrapper {
+        width: 1920px;
+        margin: 0 auto;
+    }
+
+    main {
+        background-color: #f6eee4;
+    }
+
+    .grid {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    aside {
+        grid-column: 1 / span 4;
+        font-size: 3em;
+    }
+}
+
+/* Media Query for Print Viewport (print) */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+
+
+
+/* Media Query for Desktop Viewport (1000 instead of 1280)*/
+
+@media screen and (min-width: 1000px), print {
+    /* Desktop Viewport: Show desktop class, hide mobile-tablet class */
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile-tablet {
+        display: none;
+    }
+
+    /* Desktop Viewport: Style rules for nav area */
+
+    nav ul li {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        padding: 0.5em 1.5em;
+    }
+
+    nav ul li a:hover {
+        color: #2a1f14;
+        background-color: #f6eee4;
+        opacity: 0.5;
+    }
+
+    /* Desktop Viewport: Style rules for main content  #11 */
+
+    #info ul {
+        margin-left: 5%;
+    }
+
+    .grid {
+        grid-template-columns: auto auto auto;
+        grid-gap: 30px;
+    }
+
+    aside {
+        grid-column: 1 / span 3;
+        font-size: 2em;
+    }
+
+    /* Desktop Viewport: Style rules for form elements */
+
+    form {
+        width: auto;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
+    }
+}
+ /* Style rules for table*/
+
+table {
+    border: 1px solid #2a1f14;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+}
+
+th,
+td {
+    border: 1px solid #2a1f14;
+    padding: 1%;
+}
+
+th {
+    background-color: #2a1f14;
+    color: #fff;
+    font-size: 1.15em;
+}
+
+
+
+
+
+
+
+
+
+/* 
+#f6eee4RGB:    rgb(246, 238, 228) HSL: (33^\circ, 50%, 93%)
+#2a1f14RGB:    rgb(42, 31, 20)\)  HSL: (30^\circ, 35%, 12%)
+#4d3319RGB:    rgb(77, 51, 25)    HSL: (30^\circ, 51%, 20%)
+*/
+
+
+/* extra notes: Desktop media query starts at styles.css:221 using @media screen and (min-width: 1000px), print.
+ (The desktop media query is set to apply styles for screens that are at least 1000 pixels wide, as well as for print media. This means that the styles defined within this media query will be applied to devices with a screen width of 1000 pixels or more, as well as when the page is printed. The use of "print" allows for specific styling when the content is printed, ensuring that it looks good on paper as well as on screen. 1280 for larger screen sizes?) */
+
+
+ /*Discuss at least three different ways this gradient could be applied. Also, this is great, I can just keep adding repos, and waste the resources. 
+ 
+ 
+ 
+ Backgrounds
+Gradients are often used as the background for an entire webpage, a section, or a container to create visual interest without using an image.
+Example:
+body {
+    background: linear-gradient(#f6eee4, #78593a);
+}
+
+Buttons:
+Applying a gradient to buttons makes them stand out and gives them a more polished, three-dimensional appearance. Pop baby Pop.
+Example:
+button {
+    background: linear-gradient(#f6eee4, #78593a);
+    border: none;
+    color: #2a1f14;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+}
+    /* This is a pseudo-class selector. Our book gave the four examples of hover, active, focus, and visited. The hover selector is used to change the appearance of an element when the user hovers over it with their mouse. This can be used to provide visual feedback to the user, indicating that the element is interactive or clickable. In this case, the hover selector is used to change the background gradient of a button when the user hovers over it, making it more visually appealing and indicating that it can be clicked. 
+button:hover {
+    background: linear-gradient(#78593a, #f6eee4);
+}
+    Headers or Banner Sections
+Gradients can be applied to the header, navigation bar, or hero section to emphasize important content.
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+Gradient borders
+Text filled with gradients using background-clip: text
+Card backgrounds
+Hover effects and animations
+    */
