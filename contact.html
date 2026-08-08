@@ -1,0 +1,110 @@
+<!-- Author:Leslie Brockman
+     File: Lab 2 : Creating  contact.html
+     Class: Web 200
+     Last Modified: 07/19/2026-->
+<!-- This is the contact page for the Wild Rescue website. It includes the contact information and a form for users to reach out to the organization.-->
+
+ <!--This is the meta data-->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--This is the meta data for the view port-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--linking css to the HTML files-->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel=" shortcut icon" href="../image/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../image/favicon-32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../image/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../image/android-chrome-192.png">
+  <title>Wild Rescue: Home</title>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <nav>
+        <!-- removing the paragraph, adding image and link to index, and reseting the Nav as a Ul--> 
+        <div class="tab-desk">
+          <a href="index.html"><img src="../image/baby-hawk.jpg" alt="Rescued baby hawk"></a>
+        </div>
+        <!--This is the mobile header that replaces the tab-desk header on smaller screens-->
+        <div class="mobile">
+          <h1>&#128062;Wild Rescues</h1>
+          <h2>Rescue. Rehabilitate. Release.</h2>
+        </div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="partnership.html">Partnership</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contact">
+        <h2>You can reach us at:</h2>
+        <p class="tel-link round"><a href="tel:8145558989">(814) 555-8989</a></p>
+
+        */ extra notes: not for deliverables #7*/
+        <p class="tab-desk">(814) 555-9228</p>
+
+        <p><a id="link" href="mailto:contact@wildrescues.net">Email:contact@wildrescues.net</a></p>
+
+/**This is the address for the Wild Rescue organization. The address is linked to Google Maps for easy navigation. The link opens in a new tab and uses rel="noopener noreferrer" for security and performance reasons. */
+
+        <p>Address: <a href="https://www.google.com/maps?q=Ocala,+FL" target="_blank" rel="noopener noreferrer">8989 Rescue Drive, Ocala, FL 34471</a></p>
+      </div>
+      <div id="form">
+        <h2>Complete the form below and we will contact you soon.</h2>
+        <!-- Form begins -->
+        <form class="form-grid">
+          <fieldset>
+            <legend>Contact Information</legend>
+            <label for="fName">First Name:</label>
+            <input type="text" name="fName" id="fName">
+
+            <label for="lName">Last Name:</label>
+            <input type="text" name="lName" id="lName">
+
+            <label for="bName">Name of Business:</label>
+            <input type="text" name="bName" id="bName">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone">
+          </fieldset>
+          <fieldset>
+            <legend>Additional Information</legend>
+            <p>I would like more information about:</p>
+
+            <label for="vol"><input type="radio" name="info" id="vol" value="Volunteering">Volunteering</label>
+
+            <label for="sponsor"><input type="radio" name="info" id="sponsor" value="Sponsorship Opportunities">Sponsorship Opportunities</label>
+
+            <label for="wild"><input type="radio" name="info" id="wild" value="Wildlife">Wildlife</label>
+
+            <label for="other"><input type="radio" name="info" id="other" value="Other">Other, please specify below.</label>
+
+            <label for="questions">What questions do you have for us?</label>
+            <textarea name="questions" id="questions" rows="5" cols="35"></textarea>
+          </fieldset>
+          <input type="submit" id="submit" value="submit" class="btn">
+        </form>
+      </div>
+    </main>
+
+    <!--This is the footer-->
+    <footer>
+      <p>&copy; Copyright 2021. All rights reserved.</p><br>
+      <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
+    </footer>
+  </div>
+</body>
+</html>
